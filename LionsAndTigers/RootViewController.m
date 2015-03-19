@@ -9,6 +9,7 @@
 #import "RootViewController.h"
 #import "TopViewController.h"
 #import "HUDViewController.h"
+#import "CustomCollectionViewCell.h"
 
 @interface RootViewController () <TopDelegate, HUDDelegate>
 
@@ -20,7 +21,6 @@
 @property HUDViewController *hudViewController;
 
 
-
 @end
 
 @implementation RootViewController
@@ -30,6 +30,7 @@
 
     self.topViewController.delegate = self;
     self.hudViewController.delegate = self;
+
 
 }
 
