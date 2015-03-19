@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1510" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Root View Controller-->
@@ -92,8 +93,102 @@
                     </layoutGuides>
                     <view key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="iDg-M1-WWh">
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="lYT-Gv-ACN">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="FiS-An-Hze">
+                                    <size key="itemSize" width="100" height="100"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="HHN-wN-qXM" customClass="CustomCollectionViewCell">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="H5w-qd-HL2">
+                                                    <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                                </imageView>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstItem="H5w-qd-HL2" firstAttribute="leading" secondItem="HHN-wN-qXM" secondAttribute="leading" id="GRp-Sg-h4F"/>
+                                            <constraint firstAttribute="trailing" secondItem="H5w-qd-HL2" secondAttribute="trailing" id="JLU-qO-jOy"/>
+                                            <constraint firstItem="H5w-qd-HL2" firstAttribute="top" secondItem="HHN-wN-qXM" secondAttribute="top" id="XAe-fo-BOI"/>
+                                            <constraint firstAttribute="bottom" secondItem="H5w-qd-HL2" secondAttribute="bottom" id="kMm-aZ-9td"/>
+                                        </constraints>
+                                        <variation key="default">
+                                            <mask key="subviews">
+                                                <exclude reference="H5w-qd-HL2"/>
+                                            </mask>
+                                            <mask key="constraints">
+                                                <exclude reference="GRp-Sg-h4F"/>
+                                                <exclude reference="JLU-qO-jOy"/>
+                                                <exclude reference="XAe-fo-BOI"/>
+                                                <exclude reference="kMm-aZ-9td"/>
+                                            </mask>
+                                        </variation>
+                                        <variation key="widthClass=compact">
+                                            <mask key="subviews">
+                                                <include reference="H5w-qd-HL2"/>
+                                            </mask>
+                                            <mask key="constraints">
+                                                <include reference="GRp-Sg-h4F"/>
+                                                <include reference="JLU-qO-jOy"/>
+                                                <include reference="XAe-fo-BOI"/>
+                                                <include reference="kMm-aZ-9td"/>
+                                            </mask>
+                                        </variation>
+                                        <connections>
+                                            <outlet property="gridImageView" destination="H5w-qd-HL2" id="w4S-Va-MXD"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="S85-3W-aCv" id="0xw-ZN-bho"/>
+                                    <outlet property="delegate" destination="S85-3W-aCv" id="faS-SJ-RQ1"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
                         <color key="backgroundColor" red="0.0" green="0.50196081399917603" blue="0.50196081399917603" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="lYT-Gv-ACN" secondAttribute="trailing" constant="16" id="0VV-xB-HkA">
+                                <variation key="widthClass=compact" constant="-16"/>
+                            </constraint>
+                            <constraint firstItem="lYT-Gv-ACN" firstAttribute="leading" secondItem="iDg-M1-WWh" secondAttribute="leadingMargin" constant="16" id="aDu-Ai-FWL">
+                                <variation key="widthClass=compact" constant="-16"/>
+                            </constraint>
+                            <constraint firstItem="lYT-Gv-ACN" firstAttribute="top" secondItem="qz9-N4-ZV4" secondAttribute="bottom" id="etL-0V-jie"/>
+                            <constraint firstItem="Pln-5X-jO9" firstAttribute="top" secondItem="lYT-Gv-ACN" secondAttribute="bottom" id="uIA-LS-097"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="lYT-Gv-ACN"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="0VV-xB-HkA"/>
+                                <exclude reference="aDu-Ai-FWL"/>
+                                <exclude reference="etL-0V-jie"/>
+                                <exclude reference="uIA-LS-097"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="lYT-Gv-ACN"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="0VV-xB-HkA"/>
+                                <include reference="aDu-Ai-FWL"/>
+                                <include reference="etL-0V-jie"/>
+                                <include reference="uIA-LS-097"/>
+                            </mask>
+                        </variation>
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Lions and Tigers" id="32S-ao-sVn">

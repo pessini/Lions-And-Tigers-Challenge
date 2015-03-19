@@ -16,6 +16,7 @@
 		569417A31ABA2CA000484009 /* LionsAndTigersTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 569417A21ABA2CA000484009 /* LionsAndTigersTests.m */; };
 		569417AE1ABA2E5400484009 /* TopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 569417AD1ABA2E5400484009 /* TopViewController.m */; };
 		569417B11ABA2E7100484009 /* HUDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 569417B01ABA2E7100484009 /* HUDViewController.m */; };
+		569417B41ABA5F9A00484009 /* CustomCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 569417B31ABA5F9A00484009 /* CustomCollectionViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +47,8 @@
 		569417AD1ABA2E5400484009 /* TopViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TopViewController.m; sourceTree = "<group>"; };
 		569417AF1ABA2E7100484009 /* HUDViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HUDViewController.h; sourceTree = "<group>"; };
 		569417B01ABA2E7100484009 /* HUDViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HUDViewController.m; sourceTree = "<group>"; };
+		569417B21ABA5F9A00484009 /* CustomCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomCollectionViewCell.h; sourceTree = "<group>"; };
+		569417B31ABA5F9A00484009 /* CustomCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomCollectionViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +95,8 @@
 				5694178D1ABA2CA000484009 /* RootViewController.h */,
 				5694178E1ABA2CA000484009 /* RootViewController.m */,
 				569417901ABA2CA000484009 /* Main.storyboard */,
+				569417B21ABA5F9A00484009 /* CustomCollectionViewCell.h */,
+				569417B31ABA5F9A00484009 /* CustomCollectionViewCell.m */,
 				569417AC1ABA2E5400484009 /* TopViewController.h */,
 				569417AD1ABA2E5400484009 /* TopViewController.m */,
 				569417AF1ABA2E7100484009 /* HUDViewController.h */,
@@ -232,6 +237,7 @@
 				569417B11ABA2E7100484009 /* HUDViewController.m in Sources */,
 				569417AE1ABA2E5400484009 /* TopViewController.m in Sources */,
 				5694178F1ABA2CA000484009 /* RootViewController.m in Sources */,
+				569417B41ABA5F9A00484009 /* CustomCollectionViewCell.m in Sources */,
 				5694178C1ABA2CA000484009 /* AppDelegate.m in Sources */,
 				569417891ABA2CA000484009 /* main.m in Sources */,
 			);
