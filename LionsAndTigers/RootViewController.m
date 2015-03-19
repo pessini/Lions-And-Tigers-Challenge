@@ -11,6 +11,7 @@
 #import "HUDViewController.h"
 #import "CustomCollectionViewCell.h"
 
+
 @interface RootViewController () <TopDelegate, HUDDelegate>
 
 @property (weak, nonatomic) IBOutlet UIView *topContainer;
@@ -19,6 +20,9 @@
 
 @property TopViewController *topViewController;
 @property HUDViewController *hudViewController;
+
+@property (nonatomic, weak) NSMutableArray *tigersArray;
+@property (nonatomic, weak) NSMutableArray *lionsArray;
 
 
 @end
@@ -61,11 +65,27 @@
 
 -(void)lionsButtonTapped
 {
+    self.lionsArray = [NSMutableArray arrayWithObjects:
+                        [UIImage imageNamed:@"lionOne"],
+                        [UIImage imageNamed:@"lionTwo"],
+                        [UIImage imageNamed:@"lionThree"], nil];
+
+    self.topViewController.photosArray = self.lionsArray;
+    [self.topViewController.imagesColletionView reloadData];
+    [self topRevealButtonTapped];
 
 }
 
 -(void)tigersButtonTapped
 {
+    self.tigersArray = [NSMutableArray arrayWithObjects:
+                        [UIImage imageNamed:@"tigerOne"],
+                        [UIImage imageNamed:@"tigerTwo"],
+                        [UIImage imageNamed:@"tigerThree"], nil];
+
+    self.topViewController.photosArray = self.tigersArray;
+    [self.topViewController.imagesColletionView reloadData];
+    [self topRevealButtonTapped];
 
 }
 

@@ -7,8 +7,9 @@
 //
 
 #import "TopViewController.h"
+#import "CustomCollectionViewCell.h"
 
-@interface TopViewController ()
+@interface TopViewController ()<UICollectionViewDataSource, UICollectionViewDelegate>
 
 @end
 
@@ -19,6 +20,20 @@
 
 }
 
+#pragma mark -UICollectionViewCellDataSource
+- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
+    CustomCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"Cell" forIndexPath:indexPath];
+    cell.gridImageView.image = self.photosArray[indexPath.row];
+    return cell;
+}
+
+-(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
+{
+    return self.photosArray.count;
+}
+
+
+#pragma mark -IBAction
 -(IBAction)onTopRevealButtonTapped
 {
     [self.delegate topRevealButtonTapped];
